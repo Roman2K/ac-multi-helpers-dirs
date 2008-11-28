@@ -2,11 +2,15 @@
 
 In Rails applications, helper modules are usually all located somewhere under `app/helpers/`. This is what is expected when eager loading helpers with `helper :all`. Unfortunately, it is not possible to indicate Rails other directories to find helper files in. This plugin introduces a way to circumvent this limitation.
 
-## How it works
+## How it works
 
 With this plugin, `helper :all` will look for `*_helper.rb` files in every `helpers` directory whose path is present in the `ActiveSupport::Dependencies.load_paths` array.
 
-## Usage
+## Usage
+
+Install the plugin:
+
+    script/plugin install git://github.com/Roman2K/action-controller-multi-helpers-dirs.git 
 
 Example configuration in `environment.rb`:
 
