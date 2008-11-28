@@ -1,0 +1,1 @@
+require 'action_controller_multi_helpers_dirs'
