@@ -4,9 +4,9 @@ ActionController::Helpers.module_eval do
   # Prevent this constant from being used since its use would not yield the
   # behaviour expected to be brought by this patch.
   case
-  when const_defined?("HELPERS_DIR")
+  when const_defined?(:HELPERS_DIR)
     remove_const :HELPERS_DIR
-  when (base = ActionController::Base).respond_to?("helpers_dir")
+  when (base = ActionController::Base).respond_to?(:helpers_dir)
     [base.metaclass, base].each do |klass|
       klass.class_eval do
         remove_method :helpers_dir
@@ -19,7 +19,7 @@ ActionController::Helpers.module_eval do
   end
   
   self::ClassMethods.module_eval do
-    unless private_method_defined?('all_application_helpers')
+    unless private_method_defined?(:all_application_helpers)
       not_applicable[]
     end
     

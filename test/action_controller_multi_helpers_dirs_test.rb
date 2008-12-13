@@ -10,11 +10,11 @@ class ActionControllerMultiHelpersDirsTest < Test::Unit::TestCase
   end
   
   def test_helpers_dir
-    assert !ActionController::Helpers.const_defined?("HELPERS_DIR")
-    assert !ActionController::Base.respond_to?("helpers_dir")
-    assert !ActionController::Base.respond_to?("helpers_dir=")
-    assert !ActionController::Base.method_defined?("helpers_dir")
-    assert !ActionController::Base.method_defined?("helpers_dir=")
+    assert !ActionController::Helpers.const_defined?(:HELPERS_DIR)
+    assert !ActionController::Base.respond_to?(:helpers_dir)
+    assert !ActionController::Base.respond_to?(:helpers_dir=)
+    assert !ActionController::Base.method_defined?(:helpers_dir)
+    assert !ActionController::Base.method_defined?(:helpers_dir=)
     assert !ActionController::Base.inheritable_attributes.keys.include?(:helpers_dir)
   end
   
