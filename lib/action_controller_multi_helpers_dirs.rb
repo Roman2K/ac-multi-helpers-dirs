@@ -27,6 +27,7 @@ ActionController::Helpers.module_eval do
   
     def all_application_helpers
       directories = ActiveSupport::Dependencies.load_paths.grep(/\bhelpers$/)
+      return [] if directories.empty?
       extract = /^(?:#{directories.map { |d| Regexp.escape d } * '|'})\/?(.*)_helper.rb$/
       Dir["{#{directories * ','}}/**/*_helper.rb"].map { |file| file.sub extract, '\1' }
     end
