@@ -34,7 +34,3 @@ This allows for having code organized like:
       ...
 
 and have `ApplicationController` call the usual `helper :all` to eager load helpers located under both `accounting/helpers/` and `system/helpers/`.
-
-## Credits
-
-Written by [Roman Le Négrate](http://roman.flucti.com) ([contact](mailto:roman.lenegrate@gmail.com)). Released under the MIT-license: see the `LICENSE` file.
