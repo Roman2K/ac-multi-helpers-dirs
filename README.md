@@ -10,7 +10,7 @@ With this plugin, `helper :all` will look for `*_helper.rb` files in every `help
 
 Install the plugin:
 
-    script/plugin install git://github.com/Roman2K/ac-multi-helpers-dirs.git 
+    script/plugin install <repo>
 
 Example configuration in `environment.rb`:
 
